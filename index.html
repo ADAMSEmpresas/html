@@ -9,6 +9,19 @@
             font-family: 'Neo Sans';
             src: url('https://example.com/fonts/NeoSans-Regular.ttf');
         }
+@media (max-width: 768px) {
+    nav {
+        display: flex;
+        flex-wrap: wrap; /* Permite que las cajas se ajusten automáticamente */
+        justify-content: center; /* Centra las cajas en dispositivos móviles */
+    }
+
+    nav a {
+        margin: 10px; /* Espaciado más generoso entre las cajas en pantallas pequeñas */
+        padding: 15px 20px; /* Ajustar tamaño en móviles */
+        font-size: 14px; /* Reducir ligeramente el tamaño del texto */
+    }
+}
 
     body {
         font-family: 'Neo Sans', sans-serif;
@@ -35,28 +48,38 @@
             height: auto;
             margin-bottom: -10px;
         }
-        nav {
-            text-align: center;
-            background-color: #FFFFFF;
-            padding: 10px 0;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 9;
-        }
-        nav a {
-            margin: 0 15px;
-            text-decoration: none;
-            color: #01432B;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: color 0.3s;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra paralela */
-        }
-        nav a:hover {
-            color: #FFA821;
-        }
+nav {
+    text-align: center;
+    background-color: #FFFFFF;
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 9;
+}
+
+nav a {
+    display: inline-block; /* Cambiar a inline-block para que se comporten como cajas */
+    margin: 5px 10px; /* Espaciado entre las cajas */
+    padding: 10px 15px; /* Tamaño de las cajas */
+    text-decoration: none;
+    color: #01432B;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    border: 2px solid #01432B; /* Borde del color especificado */
+    border-radius: 15px; /* Bordes redondeados */
+    background-color: transparent; /* Fondo transparente */
+    transition: color 0.3s, background-color 0.3s; /* Animación en hover */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra paralela */
+}
+
+nav a:hover {
+    color: #FFFFFF;
+    background-color: #01432B; /* Cambiar el fondo en hover */
+    text-shadow: none; /* Eliminar sombra en hover */
+}
+
         section {
             display: none;
             margin: 20px auto;
